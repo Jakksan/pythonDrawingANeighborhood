@@ -8,12 +8,12 @@ penup()
 
 def drawTriangle(x, y, tri_base, tri_height):
 
+    # Calculate all the measurements and angles needed to draw the triangle
     side_length = math.sqrt((0.5*tri_base)**2 + tri_height**2)
-
     base_angle = math.degrees(math.atan(tri_height/(tri_base/2)))
-
     top_angle = 180 - (2 * base_angle)
 
+    # Draw the triangle using the calculations from above
     penup()
     goto(x, y)
     pendown()
@@ -25,7 +25,7 @@ def drawTriangle(x, y, tri_base, tri_height):
     forward(side_length)
     penup()
 
-#drawTriangle(0, 0, 250, 40)
+# drawTriangle(0, 0, 250, 40)
 
 def drawRectangle(x, y, rec_width, rect_height):
     penup()
@@ -42,7 +42,7 @@ def drawRectangle(x, y, rec_width, rect_height):
 
     penup()
 
-#drawRectangle(0, 0, 50, 55)
+# drawRectangle(0, 0, 50, 55)
 
 def drawCircle(x, y, radius):
     penup()
@@ -52,12 +52,14 @@ def drawCircle(x, y, radius):
     circle(radius)
     penup()
 
-#drawCircle(0, 0, 90)
+# drawCircle(0, 0, 90)
 
 def drawTree(x, y, tree_height):
 
     drawRectangle((x-(tree_height * 0.1)), y, (tree_height * 0.2), tree_height * 0.5)
     drawCircle(x, (y + (tree_height * 0.75)), (tree_height * 0.25))
+
+# drawTree(200, 20, 120)
 
 def drawHouse(x, y, house_width, house_height):
 
@@ -99,8 +101,8 @@ def drawHouse(x, y, house_width, house_height):
 
     penup()
 
+# drawHouse(-100, -40, 300, 300)
 
-# drawHouse(-100, -40, 300, 300)  # uncomment to test the drawHouse function
-# drawTree(0, 0, 60)
+
 
 input()
