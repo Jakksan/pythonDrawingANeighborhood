@@ -101,8 +101,58 @@ def drawHouse(x, y, house_width, house_height):
 
     penup()
 
-# drawHouse(-100, -40, 300, 300)
 
+def drawPumpkin(x, y, radius):
+    drawRectangle(x, y+radius-3, radius/4, radius/2)
+    begin_fill()
+    fillcolor("white")
+    drawCircle(x, y, radius)
+    end_fill()
+
+# drawPumpkin(0, 0, 30)
+# drawHouse(-200, -200, 200, 300)
+
+
+################################################################################
+# Start Drawing the Neighborhood
+
+
+# Read each file
+infile = open("input_file.txt")
+text_array = []
+
+# read the first line
+line = infile.readline()
+
+# Do this loop until we reach the end of the file
+while line:
+
+    # remove newline
+    line = line.rstrip('\n')
+
+
+    # append the line to the text array
+    text_array.append(line)
+
+    # read the next line
+    line = infile.readline()
+
+
+# print(text_array)
+
+for text in text_array:
+    print(text + "\n")
+    text = text.split()
+
+
+
+    print(text[3])
+
+    if text[0] == "house":
+        drawHouse(int(text[1]), int(text[2]), int(text[3]), int(text[4]))
+
+    else:
+        print("other")
 
 
 input()
