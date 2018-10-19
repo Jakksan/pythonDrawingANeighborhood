@@ -2,15 +2,40 @@ from turtle import *
 import math
 import time
 
-setup(1000,1000)
+#setup(1000,1000)
 goto(0,0)
 penup()
 
+<<<<<<< HEAD
+###########################################
+# drawTriangle()
+#       Draw a triangle depending on parameters
+#
+# Parameters
+# ----------
+# x : int
+#     x coordinate of the anchorpoint
+# y : int
+#     y coordinate of the anchorpoint
+# tri_base : int
+#     the length of the triangle base
+# tri_height : int
+#     the height of the triangle
+# color : str
+#     the color of the triangle
+#
+# Returns
+# -------
+# none
+###########################################
+=======
 
 
 
 def drawTriangle(x, y, tri_base, tri_height, color):
+>>>>>>> 7b5af7c8cd191d96a0309ee7fb15e3a1771f3b93
 
+def drawTriangle(x, y, tri_base, tri_height, color):
     # Calculate all the measurements and angles needed to draw the triangle
     side_length = math.sqrt((0.5*tri_base)**2 + tri_height**2)
     base_angle = math.degrees(math.atan(tri_height/(tri_base/2)))
@@ -39,9 +64,34 @@ def drawTriangle(x, y, tri_base, tri_height, color):
     penup()
 
 
+###########################################
+# drawRectangle()
+#       Draw a rectangle depending on parameters
+#
+# Parameters
+# ----------
+# x : int
+#     x coordinate of the anchorpoint
+# y : int
+#     y coordinate of the anchorpoint
+# rec_width : int
+#     the length of the rectangle base
+# rect_height : int
+#     the height of the rectangle
+# color : str
+#     color of the rectangle
+#
+# Returns
+# -------
+# none
+###########################################
+
 def drawRectangle(x, y, rec_width, rect_height, color):
 
+<<<<<<< HEAD
+=======
     # Lift pen to prevent stray lines
+>>>>>>> 7b5af7c8cd191d96a0309ee7fb15e3a1771f3b93
     penup()
 
     # Go to some x and y coordinates
@@ -65,9 +115,32 @@ def drawRectangle(x, y, rec_width, rect_height, color):
     penup()
 
 
+###########################################
+# drawCircle()
+#       Draw a circle depending on parameters
+#
+# Parameters
+# ----------
+# x : int
+#     x coordinate of the anchorpoint
+# y : int
+#     y coordinate of the anchorpoint
+# radius : int
+#     radius of the circle
+# color : str
+#     color of the circle
+#
+# Returns
+# -------
+# none
+###########################################
+
 def drawCircle(x, y, radius, color):
 
+<<<<<<< HEAD
+=======
     # Lift pen to prevent stray lines
+>>>>>>> 7b5af7c8cd191d96a0309ee7fb15e3a1771f3b93
     penup()
 
     # Go to some x and y coordinates
@@ -88,6 +161,26 @@ def drawCircle(x, y, radius, color):
     penup()
 
 
+###########################################
+# drawTree()
+#       Draw a tree depending on parameters
+#
+# Parameters
+# ----------
+# x : int
+#     x coordinate of the anchorpoint
+# y : int
+#     y coordinate of the anchorpoint
+# tree_height : int
+#     height of the tree
+# color : str
+#     color of the canopy of the tree
+#
+# Returns
+# -------
+# none
+###########################################
+
 def drawTree(x, y, tree_height, color):
 
     # Draw the trunk of the tree, it will always be sandy brown
@@ -96,6 +189,30 @@ def drawTree(x, y, tree_height, color):
     # Draw the leafy part of the tree, make it some color
     drawCircle(x, (y + (tree_height * 0.75) - 10), (tree_height * 0.25), color)
 
+
+###########################################
+# drawHouse()
+#       Draw a house depending on parameters
+#
+# Parameters
+# ----------
+# x : int
+#     x coordinate of the anchorpoint
+# y : int
+#     y coordinate of the anchorpoint
+# house_width : int
+#     width of the hosue
+# house_height : int
+#     height of the house
+# primary_color : str
+#     color of the building
+# secondary_color : str
+#     color of the roof
+#
+# Returns
+# -------
+# none
+###########################################
 
 def drawHouse(x, y, house_width, house_height, primary_color, secondary_color):
 
@@ -146,10 +263,33 @@ def drawHouse(x, y, house_width, house_height, primary_color, secondary_color):
     pensize(1)
     penup()
 
+<<<<<<< HEAD
+###########################################
+# drawTownSign
+#       Draw a sign with the town name depending on parameters
+#
+# Parameters
+# ----------
+# x : int
+#     x coordinate of the anchorpoint
+# y : int
+#     y coordinate of the anchorpoint
+# text : str
+#     text to be printed on the sign
+#
+# Returns
+# -------
+# none
+###########################################
+
+def drawTownSign(x, y, text):
+
+=======
 
 def drawTownSign(x, y, text):
 
 
+>>>>>>> 7b5af7c8cd191d96a0309ee7fb15e3a1771f3b93
     letters = len(list(text))
     sign_width = (letters*10)+10
 
@@ -172,8 +312,11 @@ def drawTownSign(x, y, text):
 
 
 
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> 7b5af7c8cd191d96a0309ee7fb15e3a1771f3b93
 ################################################################################
 # Start Drawing the Neighborhood
 
