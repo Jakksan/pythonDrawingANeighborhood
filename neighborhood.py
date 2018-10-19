@@ -94,7 +94,7 @@ def drawTree(x, y, tree_height, color):
     drawRectangle((x-(tree_height * 0.1)), y, (tree_height * 0.2), tree_height * 0.5, "sandy brown")
 
     # Draw the leafy part of the tree, make it some color
-    drawCircle(x, (y + (tree_height * 0.75)), (tree_height * 0.25), color)
+    drawCircle(x, (y + (tree_height * 0.75) - 10), (tree_height * 0.25), color)
 
 
 def drawHouse(x, y, house_width, house_height, primary_color, secondary_color):
