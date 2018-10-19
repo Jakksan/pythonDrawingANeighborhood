@@ -6,8 +6,29 @@ import time
 goto(0,0)
 penup()
 
-def drawTriangle(x, y, tri_base, tri_height, color):
+###########################################
+# drawTriangle()
+#       Draw a triangle depending on parameters
+#
+# Parameters
+# ----------
+# x : int
+#     x coordinate of the anchorpoint
+# y : int
+#     y coordinate of the anchorpoint
+# tri_base : int
+#     the length of the triangle base
+# tri_height : int
+#     the height of the triangle
+# color : str
+#     the color of the triangle
+#
+# Returns
+# -------
+# none
+###########################################
 
+def drawTriangle(x, y, tri_base, tri_height, color):
     # Calculate all the measurements and angles needed to draw the triangle
     side_length = math.sqrt((0.5*tri_base)**2 + tri_height**2)
     base_angle = math.degrees(math.atan(tri_height/(tri_base/2)))
@@ -33,7 +54,30 @@ def drawTriangle(x, y, tri_base, tri_height, color):
 
 # drawTriangle(0, 0, 250, 40)
 
+###########################################
+# drawRectangle()
+#       Draw a rectangle depending on parameters
+#
+# Parameters
+# ----------
+# x : int
+#     x coordinate of the anchorpoint
+# y : int
+#     y coordinate of the anchorpoint
+# rec_width : int
+#     the length of the rectangle base
+# rect_height : int
+#     the height of the rectangle
+# color : str
+#     color of the rectangle
+#
+# Returns
+# -------
+# none
+###########################################
+
 def drawRectangle(x, y, rec_width, rect_height, color):
+
     penup()
     goto(x, y)
 
@@ -55,7 +99,28 @@ def drawRectangle(x, y, rec_width, rect_height, color):
 
 # drawRectangle(0, 0, 50, 55)
 
+###########################################
+# drawCircle()
+#       Draw a circle depending on parameters
+#
+# Parameters
+# ----------
+# x : int
+#     x coordinate of the anchorpoint
+# y : int
+#     y coordinate of the anchorpoint
+# radius : int
+#     radius of the circle
+# color : str
+#     color of the circle
+#
+# Returns
+# -------
+# none
+###########################################
+
 def drawCircle(x, y, radius, color):
+
     penup()
 
     setheading(0)
@@ -72,6 +137,26 @@ def drawCircle(x, y, radius, color):
 
 # drawCircle(0, 0, 90)
 
+###########################################
+# drawTree()
+#       Draw a tree depending on parameters
+#
+# Parameters
+# ----------
+# x : int
+#     x coordinate of the anchorpoint
+# y : int
+#     y coordinate of the anchorpoint
+# tree_height : int
+#     height of the tree
+# color : str
+#     color of the canopy of the tree
+#
+# Returns
+# -------
+# none
+###########################################
+
 def drawTree(x, y, tree_height, color):
 
 
@@ -80,6 +165,30 @@ def drawTree(x, y, tree_height, color):
     drawCircle(x, (y + (tree_height * 0.75)), (tree_height * 0.25), color)
 
 # drawTree(200, 20, 120)
+
+###########################################
+# drawHouse()
+#       Draw a house depending on parameters
+#
+# Parameters
+# ----------
+# x : int
+#     x coordinate of the anchorpoint
+# y : int
+#     y coordinate of the anchorpoint
+# house_width : int
+#     width of the hosue
+# house_height : int
+#     height of the house
+# primary_color : str
+#     color of the building
+# secondary_color : str
+#     color of the roof
+#
+# Returns
+# -------
+# none
+###########################################
 
 def drawHouse(x, y, house_width, house_height, primary_color, secondary_color):
 
@@ -121,16 +230,26 @@ def drawHouse(x, y, house_width, house_height, primary_color, secondary_color):
 
     penup()
 
-
-def drawPumpkin(x, y, radius):
-    drawRectangle(x, y+radius-3, radius/4, radius/2, "orange")
-    begin_fill()
-    fillcolor("white")
-    drawCircle(x, y, radius)
-    end_fill()
-
+###########################################
+# drawTownSign
+#       Draw a sign with the town name depending on parameters
+#
+# Parameters
+# ----------
+# x : int
+#     x coordinate of the anchorpoint
+# y : int
+#     y coordinate of the anchorpoint
+# text : str
+#     text to be printed on the sign
+#
+# Returns
+# -------
+# none
+###########################################
 
 def drawTownSign(x, y, text):
+
     letters = len(list(text))
     sign_width = (letters*10)+10
 
@@ -148,6 +267,7 @@ def drawTownSign(x, y, text):
     write("Welcome to", align="center", font=("Monaco", 12, "normal"))
     setpos(x, y+20)
     write(text, align="center", font=("Monaco", 12, "normal"))
+
 
 
 ################################################################################
