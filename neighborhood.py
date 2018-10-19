@@ -2,7 +2,7 @@ from turtle import *
 import math
 import time
 
-setup(1000,1000)
+#setup(1000,1000)
 goto(0,0)
 penup()
 
