@@ -162,12 +162,12 @@ for text in text_array:
     print(text + "\n")
     text = text.split()
 
-
-
     print(text[3])
 
     if text[0] == "house":
         drawHouse(int(text[1]), int(text[2]), int(text[3]), int(text[4]))
+    elif text[0] == "tree":
+        drawTree(int(text[1]), int(text[2]), int(text[3]))
 
     else:
         print("other")
