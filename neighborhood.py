@@ -109,6 +109,24 @@ def drawPumpkin(x, y, radius):
     drawCircle(x, y, radius)
     end_fill()
 
+
+def drawTownSign(x, y, text):
+    letters = len(list(text))
+    sign_width = (letters*10)+10
+
+    drawRectangle((x-5), y, 10, 15)
+
+    if letters < 10:
+        sign_width = 120
+
+    drawRectangle(x-(0.5*sign_width), y+15, sign_width, 60)
+
+    setpos(x, y+50)
+    write("Welcome to", align="center", font=("Monaco", 12, "normal"))
+    setpos(x, y+20)
+    write(text, align="center", font=("Monaco", 12, "normal"))
+
+
 # drawPumpkin(0, 0, 30)
 # drawHouse(-200, -200, 200, 300)
 
