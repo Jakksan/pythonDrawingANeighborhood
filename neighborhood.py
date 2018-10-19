@@ -155,22 +155,19 @@ while line:
     # read the next line
     line = infile.readline()
 
-
-# print(text_array)
+drawTownSign(0, -300, text_array[0])
 
 for text in text_array:
     print(text + "\n")
     text = text.split()
 
-    print(text[3])
 
     if text[0] == "house":
         drawHouse(int(text[1]), int(text[2]), int(text[3]), int(text[4]))
     elif text[0] == "tree":
         drawTree(int(text[1]), int(text[2]), int(text[3]))
-
     else:
-        print("other")
+        print("ERROR, CANNOT DRAW: " + '"'+ text[0] +'"')
 
 
 input()
