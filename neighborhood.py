@@ -2,11 +2,10 @@ from turtle import *
 import math
 import time
 
-#setup(1000,1000)
+setup(1000,1000)
 goto(0,0)
 penup()
 
-<<<<<<< HEAD
 ###########################################
 # drawTriangle()
 #       Draw a triangle depending on parameters
@@ -27,13 +26,6 @@ penup()
 # Returns
 # -------
 # none
-###########################################
-=======
-
-
-
-def drawTriangle(x, y, tri_base, tri_height, color):
->>>>>>> 7b5af7c8cd191d96a0309ee7fb15e3a1771f3b93
 
 def drawTriangle(x, y, tri_base, tri_height, color):
     # Calculate all the measurements and angles needed to draw the triangle
@@ -84,14 +76,11 @@ def drawTriangle(x, y, tri_base, tri_height, color):
 # Returns
 # -------
 # none
-###########################################
 
 def drawRectangle(x, y, rec_width, rect_height, color):
 
-<<<<<<< HEAD
-=======
+
     # Lift pen to prevent stray lines
->>>>>>> 7b5af7c8cd191d96a0309ee7fb15e3a1771f3b93
     penup()
 
     # Go to some x and y coordinates
@@ -117,6 +106,7 @@ def drawRectangle(x, y, rec_width, rect_height, color):
 
 ###########################################
 # drawCircle()
+
 #       Draw a circle depending on parameters
 #
 # Parameters
@@ -133,14 +123,10 @@ def drawRectangle(x, y, rec_width, rect_height, color):
 # Returns
 # -------
 # none
-###########################################
 
 def drawCircle(x, y, radius, color):
 
-<<<<<<< HEAD
-=======
     # Lift pen to prevent stray lines
->>>>>>> 7b5af7c8cd191d96a0309ee7fb15e3a1771f3b93
     penup()
 
     # Go to some x and y coordinates
@@ -179,7 +165,6 @@ def drawCircle(x, y, radius, color):
 # Returns
 # -------
 # none
-###########################################
 
 def drawTree(x, y, tree_height, color):
 
@@ -212,7 +197,6 @@ def drawTree(x, y, tree_height, color):
 # Returns
 # -------
 # none
-###########################################
 
 def drawHouse(x, y, house_width, house_height, primary_color, secondary_color):
 
@@ -263,7 +247,7 @@ def drawHouse(x, y, house_width, house_height, primary_color, secondary_color):
     pensize(1)
     penup()
 
-<<<<<<< HEAD
+
 ###########################################
 # drawTownSign
 #       Draw a sign with the town name depending on parameters
@@ -280,16 +264,10 @@ def drawHouse(x, y, house_width, house_height, primary_color, secondary_color):
 # Returns
 # -------
 # none
-###########################################
 
 def drawTownSign(x, y, text):
 
-=======
-
-def drawTownSign(x, y, text):
-
-
->>>>>>> 7b5af7c8cd191d96a0309ee7fb15e3a1771f3b93
+    # Find out the length of the letters and set the sign length accordingly
     letters = len(list(text))
     sign_width = (letters*10)+10
 
@@ -311,12 +289,6 @@ def drawTownSign(x, y, text):
     write(text, align="center", font=("Monaco", 12, "normal"))
 
 
-
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 7b5af7c8cd191d96a0309ee7fb15e3a1771f3b93
 ################################################################################
 # Start Drawing the Neighborhood
 
